@@ -35,9 +35,13 @@ const QuotesFetcher = () => {
   return (
     <section className="flex flex-col md:items-center justify-center px-4 gap-3">
       {loading ? (
-        <p className="text-white">Loading...</p>
+        <div className="flex justify-center items-center h-32">
+          <p className="text-white text-sm sm:text-xl items-center">Loading...</p>
+        </div>
       ) : error ? (
-        <p className="text-red-500">{error}</p>
+        <div className="flex justify-center items-center h-32">
+          <p className="text-red-500 text-sm sm:text-xl items-center">{error}</p>
+        </div>
       ) : (
         <div className="max-w-md mt-4 p-4">
           <p className="italic text-base mr-6 sm:mr-0">&ldquo;{quote.quote}&ldquo;</p>
